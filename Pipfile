@@ -9,6 +9,11 @@ verify_ssl = true
 pymysl = "*"
 pymysql = "*"
 sqlalchemy = "*"
+flask-sqlalchemy = "*"
+pandas = "*"
+3-7 = "*"
+flask = "*"
+python = "*"
 
 [requires]
 python_version = "3.7"
