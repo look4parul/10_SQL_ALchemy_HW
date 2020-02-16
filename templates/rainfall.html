@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Webpage</title>
+    <title>Precipitaion Details</title>
 </head>
 <body>
-	<h4>Precipitaion details for every day during last year</h4>>
-    <ol>
-    	{% for k, v in target.items() %}
-    	<li>Date: {{k}} &nbsp;
-    	Precipitaion: {{v}}
-   		{% endfor %}
+	<h4>Precipitaion details for every day during last year</h4>
+    <table border = 1>
+    	<thead><th>Date</th><th>Prcp(cms)</th></thead>
+    	{% for k, v in target %}
+    	<tr>
+    		<td> {{k}} &nbsp;</td>
+    		<td> {{v}} </td>
+
+    	</tr>
+    	{% endfor %}
 		
         
-    </ol>
+    </table>
 
 </body>
 </html>
-
 

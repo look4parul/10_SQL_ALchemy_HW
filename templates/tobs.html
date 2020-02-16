@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>tobs info</title>
+</head>
+<body>
+  <h4>Temperature Observations during last year</h4>
+    <table border = 1>
+      <thead><th>Date</th><th>Tobs(F)</th><th>Station ID</th></thead>
+      {% for d, t , s in target %}
+      <tr>
+        <td> {{d}} &nbsp;</td>
+        <td> {{t}} F </td>
+        <td> {{s}} </td>
+
+      </tr>
+      {% endfor %}
+    
+        
+    </table>
+
+</body>
+</html>
+

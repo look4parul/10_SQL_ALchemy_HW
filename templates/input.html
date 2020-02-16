@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Temp for date range</title>
+      <script type="text/javascript">
+         var baseURL="http://127.0.0.1:5000/api/v1.0/";
+         function openURL(){
+            var startDate = document.getElementById('trip_start_date').value;
+            var endDate = document.getElementById('trip_end_date').value;
+
+            if(startDate == ''){
+               alert('Start date is required.');
+               return;
+            }
+
+            if(endDate != ''  &&(startDate > endDate)){
+               alert('Start date must be same or before end date')
+               return;
+            }
+
+            if(endDate == ''){
+               window.open(baseURL+startDate);
+            }else{
+                window.open(baseURL+startDate+"/"+endDate);
+            }
+
+            
+            
+         }
+      </script>
+   </head>
+	
+   <body>
+      <h4>Temp details with start_date, end_date</h4>
+      <table>
+         <tr>
+            <td>Start date: </td>
+            <td><input type = "Date" id = "trip_start_date" value = "" min="2010-01-01" max="2017-08-23" /></td>
+         </tr>
+         <tr>
+            <td>End date: </td>
+            <td><input type = "Date" id = "trip_end_date" value = "" min="2010-01-01" max="2017-08-23" /></td>
+         </tr>
+         <tr>
+            <td colspan="2">
+                <input type="button" onclick="openURL()" value="Go!" align="center">
+            </td>
+         
+      </table>
+
+
+   </body>
+
+   </html>

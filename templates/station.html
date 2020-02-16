@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Webpage</title>
+    <title>Station Details</title>
 </head>
 <body>
-    <h4>List of Stations with station ID and names</h4>
-    <ol>
-    	{% for k, v in target.items() %}
-    	<li>ID: {{k}} &nbsp;
-    	Name: {{v.title()}}
+    <h4>List of stations from the dataset</h4>
+    <table border =1>
+    	<thead><th>Station ID</th><th>Station Name</th></thead>
+    	{% for k, v in target %}
+    	<tr>
+    		<td>{{k}} </td>
+    		<td>{{v.title()}}</td>
    		{% endfor %}
+   		</tr>
 		
         
-    </ol>
+    </table>
 
 </body>
 </html>
-
-
