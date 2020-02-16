@@ -126,6 +126,7 @@ def rainfall():
     # Convert list of tuples into a dictionary
     precipitation_dict = dict(precipitation_date)
 
+    # return render_template("rainfall.html", target=precipitation_dict)
     return jsonify(precipitation_dict)
 
 
@@ -139,6 +140,7 @@ def get_stations():
     active_stations_list = [(i, j) for i, j in active_stations]
     stations_dict = dict(active_stations_list)
     return jsonify(stations_dict)
+    # return render_template("station.html", target=stations_dict)
 
 
 #########################################################################################
