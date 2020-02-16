@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+	<h4>Precipitaion details for every day during last year</h4>
+    <ol>
+    	{% for k, v in target.items() %}
+    	<li>Date: {{k}} &nbsp;
+    	Precipitaion: {{v}}
+   		{% endfor %}
+   	</li>
+		
+        
+    </ol>
+
+</body>
+</html>
+
+
